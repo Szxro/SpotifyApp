@@ -10,7 +10,7 @@ export class AppComponent {
   constructor(private apiService: ApiService) {}
   public authUrl: string = this.apiService.loginUrl;
 
-  getUrlHash(): void {
-    console.log(this.apiService.getUrl);
+  logIn(): void {
+    this.apiService.logUser();
   }
 }

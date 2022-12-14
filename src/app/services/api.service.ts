@@ -9,7 +9,6 @@ export class ApiService {
     TODO:
     -Divide the project  
     -Make Routes(Login/Home/etc..)
-    -Get the token and expiredate and save it in the localstorage
     -Verify if the token and the expiredate is in the localstorage to redirect to some route(Guard)
     -Make an method when the token expires and make the user login again or get the refreshToken
 
@@ -45,4 +44,28 @@ export class ApiService {
     );
   }
   constructor() {}
+
+  logUser(): void {
+    let result: any = this.getUrl;
+    //Saving the user credentials
+    this.saveUserAuth(result.access_token, result.expires_in);
+    if (
+      !localStorage.getItem('Token') ||
+      !localStorage.getItem('expiredTime')
+    ) {
+      return console.log('Something Happen');
+    }
+
+    return console.log('The user can log in');
+  }
+
+  saveUserAuth(token: string, expiredTime: string): void {
+    if (!token || !expiredTime) {
+      //TODO:Make a popout and return to the login page
+      return console.log('Something Happen');
+    }
+    localStorage.setItem('Token', token);
+    localStorage.setItem('expiredTime', expiredTime);
+    return console.log('User Credentials save');
+  }
 }
