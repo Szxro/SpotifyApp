@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   clientId: '470848a2d30f47e9ba858fd7cee27b68',
-  secretKey: 'abad230d53054059931277d384a4d112',
+  secretKey: '8552006017694abb9e368d60a254c9da',
   authEndPoint: 'https://accounts.spotify.com/authorize',
   authToken: 'https://accounts.spotify.com/api/token',
   //Scopes are the stuffs that you are going to use
