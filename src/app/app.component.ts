@@ -10,7 +10,11 @@ export class AppComponent {
   constructor(private apiService: ApiService) {}
   public authUrl: string = this.apiService.loginUrl;
 
-  logIn(): void {
-    this.apiService.logUser();
+  ngOnInit() {
+    //this.apiService.saveCode();
+    //if (!localStorage.getItem('Code')) {
+    //  return console.log('Error');
+    //}
+    //this.apiService.getAccessToken().subscribe((m) => console.log(m));
   }
 }
