@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ApiService } from './services/api.service';
+import { LoginService } from './services/login.service';
+import { HelperService } from './services/helper.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,5 @@ import { ApiService } from './services/api.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private apiService: ApiService) {}
-  public authUrl: string = this.apiService.loginUrl;
-
-  ngOnInit() {
-    //this.apiService.saveCode();
-    //if (!localStorage.getItem('Code')) {
-    //  return console.log('Error');
-    //}
-    //this.apiService.getAccessToken().subscribe((m) => console.log(m));
-  }
+  ngOnInit() {}
 }

@@ -4,10 +4,17 @@
 
 export const environment = {
   production: false,
-  clientId: 'CLIENT_ID',
-  secretKey: 'SECRET_KEY',
+};
+
+export const redirectUris = {
   authEndPoint: 'https://accounts.spotify.com/authorize',
   authToken: 'https://accounts.spotify.com/api/token',
+  redirectUri: 'http://localhost:4200/',
+};
+
+export const clientCredentials = {
+  clientId: 'CLIENT_ID',
+  secretKey: 'SECRET_KEY',
   //Scopes are the stuffs that you are going to use
   scopes: [
     'user-read-currently-playing',
@@ -16,7 +23,6 @@ export const environment = {
     'user-modify-playback-state',
     'user-top-read',
   ],
-  redirectUri: 'http://localhost:4200/',
 };
 
 /*
